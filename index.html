@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Color Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Section -->
+        <section id="welcomeSection" class="welcome-section">
+            <h1>Welcome to Your Personal Color Expert</h1>
+            <div class="card">
+                <h2>Discover Your Perfect Colors</h2>
+                <p>Seasonal color analysis is a method of determining the colors that best suit your natural coloring. By analyzing your skin tone, eye color, and hair color, we can identify which color palette will make you look and feel your best.</p>
+                <p>Understanding your color season can help you:</p>
+                <ul>
+                    <li>Choose clothing that enhances your natural beauty</li>
+                    <li>Select makeup that complements your features</li>
+                    <li>Create a harmonious and flattering wardrobe</li>
+                </ul>
+                <button id="getStartedBtn" class="btn" data-original-text="Get Started">Get Started</button>
+            </div>
+        </section>
+
+        <!-- Options Section -->
+        <section id="optionsSection" class="hidden">
+            <h2>Choose Your Analysis Method</h2>
+            <div class="options-container">
+                <div class="option-card">
+                    <h3>Upload a Photo</h3>
+                    <p>Let our AI analyze your photo to determine your perfect colors</p>
+                    <button id="uploadOptionBtn" class="btn" data-original-text="Upload Photo">Upload Photo</button>
+                </div>
+                <div class="option-card">
+                    <h3>Manual Selection</h3>
+                    <p>Choose your colors manually for a customized analysis</p>
+                    <button id="manualOptionBtn" class="btn" data-original-text="Select Colors">Select Colors</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upload Section -->
+        <section id="uploadSection" class="hidden">
+            <div class="card">
+                <h2>Upload Your Photo</h2>
+                <p>Please upload a clear, well-lit photo of your face without makeup</p>
+                <input type="file" id="imageUpload" accept="image/jpeg,image/png" class="file-input">
+                <img id="imagePreview" class="hidden" alt="Preview">
+                <button id="analyzeUploadBtn" class="btn" data-original-text="Analyze Photo">Analyze Photo</button>
+            </div>
+        </section>
+
+        <!-- Manual Color Selection Section -->
+        <section id="manualSection" class="hidden">
+            <div class="card">
+                <h2>Select Your Colors</h2>
+                <div class="color-picker-container">
+                    <div class="color-picker-box">
+                        <label for="skinColor">Skin Tone</label>
+                        <input type="color" id="skinColor" value="#FFE0BD">
+                    </div>
+                    <div class="color-picker-box">
+                        <label for="eyeColor">Eye Color</label>
+                        <input type="color" id="eyeColor" value="#634E34">
+                    </div>
+                    <div class="color-picker-box">
+                        <label for="hairColor">Hair Color</label>
+                        <input type="color" id="hairColor" value="#3B3024">
+                    </div>
+                </div>
+                <button id="analyzeManualBtn" class="btn" data-original-text="Analyze Colors">Analyze Colors</button>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="resultSection" class="hidden">
+            <div class="card result-section">
+                <h2 id="seasonResult"></h2>
+                <p>Here are your recommended colors:</p>
+                <div id="colorPalette" class="color-palette"></div>
+                <p>These colors will enhance your natural beauty and create harmony with your features.</p>
+            </div>
+        </section>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
